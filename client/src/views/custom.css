@@ -1,0 +1,45 @@
+
+.meeting-section-header{
+    
+    color: #59E0C8;
+}
+
+
+
+/* profile  */
+
+.sidebar[data="blue"], .off-canvas-sidebar[data="blue"] {
+    background: #0e1635 !important;
+    background: -webkit-gradient(linear, left bottom, left top, from(#5e6580), to(#0e355c)) !important;
+    background: linear-gradient(0deg, #83889c 0%, #09213a 100%) !important;
+}
+
+.react-calendar__tile:enabled:hover, .react-calendar__tile:enabled:focus {
+    /* background-color: #e6e6e6; */
+    border: 3px solid white !important;
+    border-radius: 6px !important;
+    box-sizing: border-box !important;
+    background:transparent;
+    outline: none;
+}
+
+
+.react-calendar, .react-calendar *, .react-calendar *:before, .react-calendar *:after {
+    background: #27293D;
+    box-sizing: border-box;
+}
+
+.react-calendar button:enabled:hover {
+    cursor: pointer;
+    border: 2px solid rgb(255, 255, 255) !important;
+}
+.react-calendar__tile:enabled:hover, .react-calendar__tile:enabled:focus {
+    background-color: #27293d !important;
+}
+
+.card-tasks {
+    height: 500px ;
+}
+.calander-card{
+    height: 400px;
+}

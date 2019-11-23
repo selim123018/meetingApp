@@ -1,0 +1,17 @@
+.alluser .name{
+    color:white;
+    font-size: 18px ;
+    font-weight: 500;
+}
+.alluser .title{
+    color: rgb(172, 171, 171);
+}
+.alluser{
+    margin-left: 15px;
+    margin-top: 10px;
+    border-bottom: 1px solid rgb(56, 53, 53);
+}
+.user-header {
+    margin-bottom: 15px !important;
+
+}
