@@ -47,9 +47,9 @@ class Register extends React.Component {
       isAproved:this.state.isAproved
     }
     axios.post('/api/users/register', newUser)
-    .then(res=> console.log('registration succesfully'))
+    .then((data)=>{ this.props.history.push("/admin/login")})
     .catch(err=>{
-      this.setState({errors:err.response.data});
+      console.log(err)
     })
   }
   render() {

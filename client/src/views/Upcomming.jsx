@@ -21,17 +21,17 @@ import {
     UncontrolledTooltip
   } from "reactstrap";
 
-  
+
 export default class Upcomming extends Component{
 
     render(){
         return(
           <>
-          {this.props.upcoming.map(singlepost=>{
+          {this.props.meeting.map(meeting=>{
             return(
-              
+
               <tr>
-                {this.props.admin? 
+                {this.props.admin?
               <td>
                 <FormGroup check>
                   <Label check>
@@ -43,10 +43,10 @@ export default class Upcomming extends Component{
                 </FormGroup>
               </td> : ""}
               <td>
-                <p className="title"> {singlepost.title} </p>
-                <p className="text-muted"> {singlepost.time} </p>
+                <p className="title"> {meeting.title} </p>
+                <p className="text-muted"> {meeting.date} </p>
               </td>
-              {this.props.admin? 
+              {this.props.admin?
               <td className="td-actions text-right">
                 <Button
                   color="link"

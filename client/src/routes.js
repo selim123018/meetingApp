@@ -25,6 +25,7 @@ import Typography from "./views/Typography.jsx";
 import UserProfile from "./views/UserProfile.jsx";
 import Register from './views/Register'
 import Login from './views/Login'
+import Meeting from './views/Meeting'
 
 
 
@@ -44,6 +45,14 @@ var routes = [
     rtlName:"adf ",
     icon:'',
     component:Login,
+    layout:"/admin"
+  },
+  {
+    path:'/meeting',
+    name:'Meeting ',
+    rtlName:"adf ",
+    icon:'',
+    component:Meeting,
     layout:"/admin"
   },
   {

@@ -4,15 +4,17 @@ const Meeting=require('../models/Meeting');
 const router=express.Router();
 
 router.post('/newMeeting', (req, res)=>{
-    const newMeeting= new Meeting({
-        title:req.body.title,
-        startTime:req.body.startTime,
-        endTime:req.body.endTime,
-        published:req.body.published,
-    })
-    newMeeting.save()
-    .then(quiz=> res.json(quiz))
-    .catch(err=> res.json(err));
+  console.log(req.body.date)
+  const newMeeting= new Meeting({
+      title:req.body.title,
+      user:req.body.user,
+      startTime:req.body.startTime,
+      endTime:req.body.endTime,
+      date:req.body.date
+  })
+  newMeeting.save()
+  .then(meeting=> console.log(meeting))
+  .catch(err=> res.json(err));
 })
 
 router.get('/allMeeting', (req, res)=>{
@@ -32,9 +34,10 @@ router.post('/update/:id',function(req, res) {
   Meeting.findById(req.params.id)
   .then(data=>{
       data.title=req.body.title;
+      data.user=req.body.user;
       data.startTime=req.body.startTime;
       data.endTime=req.body.endTime;
-      data.published=req.body.published;
+      data.date=req.body.date;
 
     data.save()
       .then((user)=>{

@@ -26,7 +26,7 @@ router.post('/register',(req,res)=>{
 				username    :req.body.username,
 				email   :req.body.email,
 				password:req.body.password,
-				userType:req.body.userType
+				role:req.body.role
 			})
 
 			bcrypt.genSalt(10, (err,salt)=>{
@@ -67,7 +67,7 @@ router.post('/login',(req,res)=>{
 		bcrypt.compare(password, user.password)
 		.then(isMatch=>{
 			if(isMatch){
-				const payload={id:user.id, name:user.name};
+				const payload={id:user.id, role:user.role, name:user.username};
 				jwt.sign(
 					payload,
 					keys.secretOrKey,
