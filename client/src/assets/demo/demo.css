@@ -137,3 +137,7 @@
     content: ""; }
   .offline-doc .page-header:before {
     background-color: rgba(0, 0, 0, 0.8); }
+.navbar-absolute{
+  height: 60px;
+  position: relative !important;
+}

@@ -6,6 +6,7 @@ import classNames from "classnames";
 import { Line, Bar } from "react-chartjs-2";
 import Select from 'react-select';
 import axios from 'axios';
+import decoded from 'jwt-decode';
 
 
 // reactstrap components
@@ -91,7 +92,6 @@ class Dashboard extends React.Component {
   componentDidMount(){
     axios.get('/api/meeting/allMeeting')
     .then(meeting=>{
-        console.log(meeting)
         this.setState({
             meeting:meeting.data
         })
@@ -100,7 +100,9 @@ class Dashboard extends React.Component {
   }
 
   render() {
-    console.log(this.state.message);
+    var accessTokenObj = localStorage.getItem('token');
+    var x=decoded(accessTokenObj)
+    console.log(x);
     const options=[
       {
       label: "monte",

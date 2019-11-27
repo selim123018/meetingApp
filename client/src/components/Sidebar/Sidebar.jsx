@@ -1,21 +1,4 @@
-/*!
 
-=========================================================
-* Black Dashboard React v1.0.0
-=========================================================
-
-* Product Page: https://www.creative-tim.com/product/black-dashboard-react
-* Copyright 2019 Creative Tim (https://www.creative-tim.com)
-* Licensed under MIT (https://github.com/creativetimofficial/black-dashboard-react/blob/master/LICENSE.md)
-
-* Coded by Creative Tim
-
-=========================================================
-
-* The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.
-
-*/
-/*eslint-disable*/
 import React from "react";
 import { NavLink, Link } from "react-router-dom";
 // nodejs library to set properties for components
@@ -61,7 +44,7 @@ class Sidebar extends React.Component {
     const { bgColor, routes, rtlActive, logo } = this.props;
     let logoImg = null;
     let logoText = null;
-    
+
     if (logo !== undefined) {
       if (logo.outterLink !== undefined) {
         logoImg = (
@@ -116,9 +99,9 @@ class Sidebar extends React.Component {
             <div className="logo">
               <h3 className="user-header" style={this.hstyle}>All Member</h3>
             </div>
-            
+
           ) : null}
-          
+
           <div>
             {/* Here all user will append */}
             <Alluser/>

@@ -32,7 +32,7 @@ import Meeting from './views/Meeting'
 
 var routes = [
   {
-    path:'/register',
+    path:'/addUser',
     name:'Registration',
     rtlName:"adf ",
     icon:'',
@@ -40,7 +40,7 @@ var routes = [
     layout:"/admin"
   },
   {
-    path:'/login',
+    path:'/adminLogin',
     name:'Ligin ',
     rtlName:"adf ",
     icon:'',
