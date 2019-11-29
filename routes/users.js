@@ -9,7 +9,6 @@ const User=require('../models/User');
 const router=express.Router();
 
 router.post('/register',(req,res)=>{
-    console.log(req.body)
 	const {errors, isValid}=validateRegisterInput(req.body);
 
     if(!isValid){
@@ -25,8 +24,8 @@ router.post('/register',(req,res)=>{
 			const newUser= new User({
 				username    :req.body.username,
 				email   :req.body.email,
+				role    :req.body.role,
 				password:req.body.password,
-				role:req.body.role
 			})
 
 			bcrypt.genSalt(10, (err,salt)=>{

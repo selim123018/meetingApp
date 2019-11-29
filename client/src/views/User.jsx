@@ -1,8 +1,11 @@
 import React from "react";
 import axios from 'axios'
+import { Link } from 'react-router-dom'
+
 // reactstrap components
 import {
   Card,
+  Button,
   CardHeader,
   CardBody,
   CardTitle,
@@ -32,10 +35,15 @@ class Tables extends React.Component {
       <>
         <div className="content">
           <Row>
+            <Col  md="12">
+                <Link to="/admin/addUser">Add User</Link>
+            </Col>
+          </Row>
+          <Row>
             <Col md="12">
               <Card>
                 <CardHeader>
-                  <CardTitle tag="h4">Simple Table</CardTitle>
+                  <CardTitle tag="h4">All User</CardTitle>
                 </CardHeader>
                 <CardBody>
                   <Table className="tablesorter" responsive>
@@ -43,6 +51,7 @@ class Tables extends React.Component {
                       <tr>
                         <th>Name</th>
                         <th>Email</th>
+                        <th>Role</th>
                         <th>Edit</th>
                         <th>Delete</th>
                         <th>Approved</th>
@@ -54,6 +63,7 @@ class Tables extends React.Component {
                         <tr>
                           <td>{user.username}</td>
                           <td>{user.email}</td>
+                          <td>{user.role}</td>
                           <td>Edit</td>
                           <td>Delete</td>
                           <td>Approved</td>

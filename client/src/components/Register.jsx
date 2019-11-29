@@ -119,20 +119,6 @@ class Register extends React.Component {
                         </FormGroup>
                       </Col>
                     </Row>
-
-                    <Row>
-                      <Col md="8">
-                        <FormGroup>
-                          <label>About you</label>
-                          <Input
-                            cols="80"
-                            placeholder="Here can be your description"
-                            rows="4"
-                            type="textarea"
-                          />
-                        </FormGroup>
-                      </Col>
-                    </Row>
                     <CardFooter>
                       <Button className="btn-fill" color="primary" type="submit">
                         Sign Up

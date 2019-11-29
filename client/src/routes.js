@@ -25,7 +25,8 @@ import Typography from "./views/Typography.jsx";
 import UserProfile from "./views/UserProfile.jsx";
 import Register from './views/Register'
 import Login from './views/Login'
-import Meeting from './views/Meeting'
+import AddUser from './views/AddUser.jsx'
+
 
 
 
@@ -61,6 +62,14 @@ var routes = [
     rtlName: "قائمة الجدول",
     icon: "tim-icons icon-puzzle-10",
     component: User,
+    layout: "/admin"
+  },
+  {
+    path: "/addUser",
+    name: "Add User",
+    rtlName: "قائمة الجدول",
+    icon: "tim-icons icon-puzzle-10",
+    component: AddUser,
     layout: "/admin"
   }
 ];

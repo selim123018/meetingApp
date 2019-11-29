@@ -8,7 +8,6 @@ import ProtectedRoute from "./components/common/ProtectedRoute";
 import PrivateRoute from "./components/common/PrivateRoute";
 
 import AdminLayout from "./layouts/Admin/Admin.jsx";
-import RTLLayout from "./layouts/RTL/RTL.jsx";
 import Login from "./components/Login";
 import Register from "./components/Register";
 import Home from './components/Home.jsx'

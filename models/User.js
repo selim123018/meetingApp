@@ -16,12 +16,12 @@ const userSchema=new Schema({
 		type:String,
 		require:true
 	},
+	role:{
+		type:String
+	},
 	password:{
 		type:String,
 		require:true
-	},
-	role:{
-		type:String
 	},
 	date:{
 		type:Date,

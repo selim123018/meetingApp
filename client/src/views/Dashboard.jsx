@@ -189,7 +189,7 @@ class Dashboard extends React.Component {
                     <Input
                       type="text"
                       name="endTime"
-                      placeholder="Title"
+                      placeholder="End"
                       value={this.state.endTime}
                       onChange={this.onChange}
                     />
