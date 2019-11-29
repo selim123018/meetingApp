@@ -46,7 +46,7 @@ class Register extends React.Component {
       isAproved:this.state.isAproved
     }
     axios.post('/api/users/register', newUser)
-    .then((data)=>{ this.props.history.push("/admin/login")})
+    .then((data)=>{ this.props.history.push("/login")})
     .catch(err=>{
       console.log(err)
     })
@@ -56,16 +56,15 @@ class Register extends React.Component {
     return (
         <div className="content">
           <Row>
-            <Col md="3"></Col>
-            <Col md="6">
+            <Col  lg={{ size: 6, order: 2, offset: 0 }} md="6">
               <Card>
                 <CardHeader>
-                  <h3 className="title">Registration Here </h3>
+                  <h3 className="title">Registration Form </h3>
                 </CardHeader>
                 <CardBody>
                   <Form onSubmit={this.onSubmit} >
                     <Row>
-                      <Col className="px-md-1" md="4">
+                      <Col className="px-md-1" md="6">
                         <FormGroup>
                           <label> First Name </label>
                           <Input
@@ -77,7 +76,7 @@ class Register extends React.Component {
                           />
                         </FormGroup>
                       </Col>
-                      <Col className="pl-md-1" md="4">
+                      <Col className="pl-md-1" md="6">
                         <FormGroup>
                           <label htmlFor="email">
                             Email address

@@ -2,7 +2,9 @@
 import React from "react";
 import ReactDOM from "react-dom";
 import { createBrowserHistory } from "history";
+import decoded from 'jwt-decode';
 import { Router, Route, Switch, Redirect } from "react-router-dom";
+import ProtectedRoute from "./components/common/ProtectedRoute";
 import PrivateRoute from "./components/common/PrivateRoute";
 
 import AdminLayout from "./layouts/Admin/Admin.jsx";
@@ -18,16 +20,16 @@ import "./assets/css/nucleo-icons.css";
 
 const hist = createBrowserHistory();
 
+
 ReactDOM.render(
   <Router history={hist}>
     <div>
       <Header />
       <Switch>
-        <PrivateRoute path="/" exact component={Home} />
         <Route path="/register" component={Register} />
         <Route path="/login" component={Login} />
-        <PrivateRoute path="/admin" render={props => <AdminLayout {...props} />} />
-        <Route path="/rtl" render={props => <RTLLayout {...props} />} />
+        <ProtectedRoute path="/" exact component={Home} />
+        <PrivateRoute path="/admin" component={AdminLayout} />
       </Switch>
     </div>
   </Router>,

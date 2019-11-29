@@ -55,12 +55,12 @@ class Login extends React.Component {
             <Col md="6">
               <Card>
                 <CardHeader>
-                  <h3 className="title">Login Here </h3>
+                  <h3 className="title text-center">Login Form </h3>
                 </CardHeader>
                 <CardBody>
                   <Form onSubmit={this.onSubmit}>
                     <Row>
-                      <Col className="pl-md-1" md="4">
+                      <Col  lg={{ size: 6, order: 2, offset: 3 }} className="px-md-1" md="6">
                         <FormGroup>
                           <label htmlFor="email">
                             Email address
@@ -75,11 +75,10 @@ class Login extends React.Component {
                           />
                         </FormGroup>
                       </Col>
-                    </Row>
-                    <Row>
-                      <Col className="pr-md-1" md="6">
+                      <Col   lg={{ size: 6, order: 2, offset: 3 }} className="pl-md-1" md="6">
                         <FormGroup>
-                          <label>Password</label>
+
+                        <label>Password</label>
                           <Input
                             placeholder="Password"
                             type="password"
@@ -90,24 +89,14 @@ class Login extends React.Component {
                         </FormGroup>
                       </Col>
                     </Row>
-                    <Row>
-                      <Col>
-                        <FormGroup check>
-                          <Label check>
-                            <Input defaultValue="" type="checkbox" />
-                            <span className="form-check-sign">
-                            <span className="check" />
-                            </span>
-                          </Label>
-                        </FormGroup>
-                        <p>Remamber this device </p>
-                      </Col>
-                    </Row>
-                    <CardFooter>
-                      <Button className="btn-fill" color="primary" type="submit">
-                        Sign Up
-                      </Button>
-                    </CardFooter>
+
+                    <Col className=""  lg={{ size: 3, order: 0, offset: 3 }} >
+                      <CardFooter   >
+                        <Button  className="btn-fill" color="primary" type="submit">
+                          Sign Up
+                        </Button>
+                      </CardFooter>
+                    </Col>
                   </Form>
                 </CardBody>
               </Card>

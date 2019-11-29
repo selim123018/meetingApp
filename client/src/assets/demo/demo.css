@@ -141,3 +141,22 @@
   height: 60px;
   position: relative !important;
 }
+.table-responsive {
+  overflow:none !important ;
+  padding-bottom: 10px;
+}
+
+h4, .h4 {
+  line-height: 0.45em;
+  margin-bottom: 7px;
+}
+
+.card {
+  background: #27293d;
+  border: 0;
+  position: relative;
+  width: 100%;
+  padding: 30px;
+  margin-bottom: 30px;
+  box-shadow: 0 1px 20px 0px rgba(0, 0, 0, 0.1);
+}
